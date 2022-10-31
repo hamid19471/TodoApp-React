@@ -1,7 +1,8 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 import TodoForm from "../TodoForm/TodoForm";
-import { Typography } from "@mui/material";
+import TodoList from "../TodoList/TodoList";
 
 const TodoApp = () => {
   return (
@@ -17,6 +18,7 @@ const TodoApp = () => {
         </Typography>
       </Typography>
       <TodoForm />
+      <TodoList />
     </Grid>
   );
 };
