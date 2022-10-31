@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Grid, Typography } from "@mui/material";
+import TodoForm from "./Components/TodoForm/TodoForm";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid
+      container
+      justifyContent={"center"}
+      alignContent={"center"}
+      flexDirection={"column"}>
+      <Typography variant='h1' mb={5}>
+        Todo-pplication
+        <Typography textAlign={"center"} borderTop={1} pt={1}>
+          APP FOR MANAGE YOU WORK AND TASKS{" "}
+        </Typography>
+      </Typography>
+      <TodoForm /> {/* FormComponent importe */}
+    </Grid>
   );
 }
 
