@@ -1,25 +1,19 @@
-import Box from "@mui/material/Box";
 import React from "react";
+import Typography from "@mui/material/Typography";
+import SingleTodo from "../SingleTodo/SingleTodo";
 
-const TodoList = () => {
+const TodoList = ({ todos, onComplete }) => {
+  if (todos.length === 0) return <Typography>Add Some Todo</Typography>;
   return (
-    <Box
-      bgcolor={"#f4f4f4"}
-      alignItems={"center"}
-      display={"flex"}
-      justifyContent={"center"}
-      mt={5}
-      borderRadius={2}
-      fontSize={22}
-      border={1}>
-      <Box
-        justifyContent={"center"}
-        alignItems={"center"}
-        display={"flex"}
-        p={2}>
-        TodoList
-      </Box>
-    </Box>
+    <>
+      {todos.map((item) => (
+        <SingleTodo
+          todo={item}
+          key={item.id}
+          onComplete={() => onComplete(item.id)}
+        />
+      ))}
+    </>
   );
 };
 
